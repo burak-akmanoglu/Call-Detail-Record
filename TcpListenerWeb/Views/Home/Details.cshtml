@@ -1,0 +1,43 @@
+﻿@model EntityLayer.ClientData
+<form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             @Html.HiddenFor(ba => ba.ClientId)
+            <div class="form-group">
+                <label asp-for="TelephoneNumber" class="control-label"></label>
+                <input asp-for="TelephoneNumber" class="form-control" />
+                <span asp-validation-for="TelephoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TargetTelephoneNumber" class="control-label"></label>
+                <input asp-for="TargetTelephoneNumber" class="form-control" />
+                <span asp-validation-for="TargetTelephoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RingTime" class="control-label"></label>
+                <input asp-for="RingTime" class="form-control" />
+                <span asp-validation-for="RingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CallTime" class="control-label"></label>
+                <input asp-for="CallTime" class="form-control" />
+                <span asp-validation-for="CallTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StartTime" class="control-label"></label>
+                <input asp-for="StartTime" class="form-control" />
+                <span asp-validation-for="StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FinishTime" class="control-label"></label>
+                <input asp-for="FinishTime" class="form-control" />
+                <span asp-validation-for="FinishTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Edit" class="btn btn-primary" />
+            </div>
+        </form>

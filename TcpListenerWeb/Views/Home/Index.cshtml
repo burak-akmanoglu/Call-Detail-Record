@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<EntityLayer.ClientData>
+@ViewBag.r
+@Html.ActionLink("Create New Data", "Create", new { @class = "btn btn-info" })</td>
+              
+  <table class="table table-striped" style="width:400px">
+      
+           <theead>
+               <tr>
+                   <th>
+                   Phone Number
+                   </th>
+                    <th>
+                  Ringing Phone Number
+                   </th>
+                    <th>
+                   Date
+                   </th>
+                    <th>
+                  Ring Time
+                   </th>
+                   <th>  Call Time</th>
+                   <th>
+                   Start Time
+                   </th>
+                    <th>
+                   Finish Time
+                   </th>
+             <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+
+               </tr>
+           </theead>
+      <tbody>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                      @item.TelephoneNumber
+                    </td>
+                    <td>
+                        @item.TargetTelephoneNumber
+                    </td>
+                    <td>
+                        @item.Date
+                    </td>
+                    <td>
+                        @item.RingTime
+                    </td>
+                    <td>
+                       @item.CallTime
+                    </td>
+                    <td>
+                        @item.StartTime
+                    </td>
+                    <td>
+                        @item.FinishTime
+                    </td>
+                       <td>@Html.ActionLink("Delete", "Delete", new { id = item.ClientId }, new { @class = "btn btn-warning" })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.ClientId }, new { @class = "btn btn-success" })</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <a href="/Home/ExportStaticExcellBlogList"> Excell Tablosu İndir</a>

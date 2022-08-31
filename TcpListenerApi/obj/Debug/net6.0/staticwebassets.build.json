@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "uoWkb/sVRpglgjOrCZEVNY1vCO8uq7Ciz4WbMAcZww0=",
+  "Source": "TcpListenerApi",
+  "BasePath": "_content/TcpListenerApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

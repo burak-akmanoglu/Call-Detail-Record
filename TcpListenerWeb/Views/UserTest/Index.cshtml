@@ -1,0 +1,51 @@
+﻿@* Web /Usertest/Index*@
+
+@model IEnumerable<EntityLayer.User>
+
+@Html.ActionLink("Create New Data", "Create", new { @class = "btn btn-info" })</td>
+              
+  <table class="table table-striped" style="width:400px">
+      
+           <theead>
+               <tr>
+                   <th>Username</th>
+                    <th> Surname</th>
+                    <th>EmailAddress</th>
+                    <th>GivenName</th>
+                   <th>  Password</th>
+                   <th>Role</th>                  
+             <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+
+               </tr>
+           </theead>
+      <tbody>
+
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                      @item.Username
+                    </td>
+                    <td>
+                        @item.Surname
+                    </td>
+                    <td>
+                        @item.EmailAddress
+                    </td>
+                    <td>
+                        @item.GivenName
+                    </td>
+                    <td>
+                       @item.Password
+                    </td>
+                    <td>
+                        @item.Role
+                    </td>
+                   
+                       <td>@Html.ActionLink("Delete", "Delete", new { id = item.UserModelId }, new { @class = "btn btn-warning" })</td>
+                <td>@Html.ActionLink("Details", "Details", new { id = item.UserModelId}, new { @class = "btn btn-success" })</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <a href="/UserTest/ExportStaticExcellBlogList"> Excell Tablosu İndir</a>
